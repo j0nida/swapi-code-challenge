@@ -1,2 +1,14 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+
 node_modules/
 .env
+.idea
+pids
+*.pid
+*.seed
+*.pid.lock
+build/Release
