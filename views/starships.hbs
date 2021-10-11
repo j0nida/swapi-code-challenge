@@ -1,23 +1,34 @@
+<a  class="btn btn-dark p-10"  href="/starships/create-starship">Create a New Starship</a>
 <table id="table_id" class="display" style="width:100%">
     <thead>
     <tr>
         <th>Name</th>
-        <th>Position</th>
-        <th>Office</th>
-        <th>Age</th>
-        <th>Start date</th>
-        <th>Salary</th>
+        <th>Model</th>
+        <th>Manufacturer</th>
+        <th>Cost in credits</th>
+        <th>Length</th>
+        <th>Max atmosphering speed</th>
+        <th>Crew</th>
+        <th>Passengers</th>
+        <th>Cargo capacity</th>
+        <th>Consumables</th>
+        <th>Starship class</th>
     </tr>
     </thead>
     <tbody>
-    {{#each starship}}
+    {{#each starships}}
         <tr>
-            <td> {{this.name}}/td>
             <td> {{this.name}}</td>
-            <td> {{this.name}}</td>
-            <td> {{this.name}}</td>
-            <td> {{this.name}}</td>
-            <td> {{this.name}}</td>
+            <td> {{this.model}}</td>
+            <td> {{this.manufacturer}}</td>
+            <td> {{this.cost_in_credits}}</td>
+            <td> {{this.length}}</td>
+            <td> {{this.max_atmosphering_speed}}</td>
+            <td> {{this.crew}}</td>
+            <td> {{this.passengers}}</td>
+            <td> {{this.cargo_capacity}}</td>
+            <td> {{this.consumables}}</td>
+            <td> {{this.starship_class}}</td>
         </tr>
     {{/each}}
 
@@ -25,11 +36,16 @@
     <tfoot>
     <tr>
         <th>Name</th>
-        <th>Position</th>
-        <th>Office</th>
-        <th>Age</th>
-        <th>Start date</th>
-        <th>Salary</th>
+        <th>Model</th>
+        <th>Manufacturer</th>
+        <th>Cost in credits</th>
+        <th>Length</th>
+        <th>Max atmosphering speed</th>
+        <th>Crew</th>
+        <th>Passengers</th>
+        <th>Cargo capacity</th>
+        <th>Consumables</th>
+        <th>Starship class</th>
     </tr>
     </tfoot>
 </table>
@@ -37,6 +53,12 @@
 
 <script>
     $(document).ready( function () {
-        $('#table_id').DataTable();
+        $('#table_id').DataTable( {
+            'paging': true,
+            "scrollY": 500,
+            "scrollX": true,
+            "searching": true
+
+        } );
     } );
 </script>

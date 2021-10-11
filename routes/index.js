@@ -46,20 +46,5 @@ router.post('/fill-db', async (req, res, next) =>
 
 })
 
-router.post("/s", async (req, res) => {
-  try
-  {
-    let starshipss = await getData("https://swapi.dev/api/starships");
-    console.log(starships)
-    let arrLength = starshipss.length;
-    for (let i = 0; i < arrLength; i++) {
-
-    }
-    return res.render("index",{  starshipss });
-
-  } catch (err) {
-    console.error(err);
-  }
-});
 
 module.exports = router;
